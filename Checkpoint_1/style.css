@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    gap: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+button{
+    color: blue;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    background-color: grey;
+    align-items: center;
+}
+
+.avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.boton-uno{
+    align-self: flex-end;
+    background-color: rgb(53, 53, 53);
+}
+
+.buscar {
+    align-self: center;
+    text-align: center;
+}
+
+.boton-dos{
+    align-self: flex-start;
+    
+}
+
+.cont-top{
+    background-color: darkgrey;
+    height: 250px;
+    display: flex;
+    padding: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: darkgrey;
+    height: 250px;
+
+}
+
+@media (max-width: 700px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar{
+        width: 100%;
+        height: 100px;
+    }
+    .cont-top{
+        background-color: darkgrey;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-around;
+    }
+
+    .boton-dos, .boton-uno, .buscar {
+        align-self: center;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    a {
+        font-weight: bold;
+    }
+}

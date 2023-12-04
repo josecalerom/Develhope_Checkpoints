@@ -17,16 +17,21 @@ async function showCats(link) {
     const lista = document.createElement("ul");
     contenedor.appendChild(lista);
     cats.forEach((cat) => {
+      const elLista = document.createElement("li");
       const div = document.createElement("div");
       div.className = "cat-container";
-      lista.appendChild(div);
-      const elLista = document.createElement("li");
-      elLista.innerHTML = `<h3>The cat ${cats.indexOf(cat)} is:</h3>`;
+      lista.appendChild(elLista);
+      elLista.appendChild(div);
+      const elTit = document.createElement("h3");
+      elTit.innerHTML = `The cat ${cats.indexOf(cat)} is:`;
       const catImage = document.createElement("img");
       catImage.setAttribute("src", cat.url);
       catImage.style.width = "300px";
-      div.appendChild(elLista);
+      const catDescription = document.createElement("h4");
+      catDescription.textContent = `and its url is: ${cat.url}`;
+      div.appendChild(elTit);
       div.appendChild(catImage);
+      div.appendChild(catDescription);
     });
   } catch (err) {
     console.error("ERROR", err);
